@@ -15,6 +15,15 @@ The initial portfolio is planned to introduce:
 - Example concepts, clearly identified as concepts rather than client work
 - Our delivery approach and contact information
 
+## Founder workspace
+
+These working documents help the team validate the business and coordinate execution:
+
+- [Product brief](docs/PRODUCT_BRIEF.md) — customer hypothesis, candidate offer, and validation criteria
+- [Customer discovery guide](docs/CUSTOMER_DISCOVERY.md) — interview questions and evidence capture
+- [Founder operating rhythm](docs/TEAM_RHYTHM.md) — Wednesday and Sunday meetings, weekly outcomes, and responsibility lanes
+- [Decision log](docs/DECISION_LOG.md) — open decisions and a template for recording evidence-backed choices
+
 ## Current status
 
 **Early draft.** The company name, positioning, service packages, and founder profiles are still being finalized. No client work, testimonials, integrations, or business results are claimed here.
