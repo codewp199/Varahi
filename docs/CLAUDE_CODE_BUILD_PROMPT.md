@@ -6,7 +6,7 @@ Copy this prompt into Claude Code with the `Varahi` repository open as the worki
 
 ## Role and outcome
 
-Act as a senior product designer and front-end engineer. Build a polished, responsive, professional portfolio website for **Varahi**, the current working name for a four-founder, service-led B2B web design and digital implementation venture.
+Act as a senior product designer and front-end engineer. Build a polished, responsive, professional portfolio website for **Varahi**, a four-founder, service-led B2B website design and management venture.
 
 The site should help a local business owner quickly understand:
 
@@ -31,11 +31,12 @@ Before writing code:
 
 ## Business context
 
-- **Business model:** service-led B2B technology services; the current focus is website design and practical digital workflow implementation for independent local businesses.
+- **Business model:** service-led B2B website design and ongoing website management.
 - **Initial geography:** Peoria, Illinois area, as a starting hypothesis to validate.
-- **Potential customer segments to investigate:** independent retailers, grocery and specialty food stores, restaurants, and one lower-complexity appointment or inquiry-based service segment. Do not present all segments as confirmed targets.
-- **Positioning:** do more than hand over a website. Help a business understand its needs, choose an appropriate platform, set up and test its online workflow, hand it over clearly, and provide support.
-- **Potential areas of work:** mobile-friendly business websites; clear presentation of products or services; contact and inquiry paths; setup of suitable booking, ordering, or commerce platforms when the customer's workflow supports them; maintenance and practical support.
+- **Initial customer segments:** restaurants, local cafes, small clinics and gaming zones. These are the team's starting focus; discovery will determine which to prioritize first.
+- **Positioning:** design and manage mobile-friendly websites that make menus, services, hours, locations and customer pathways easy to find. Hand over accounts and content clearly.
+- **Core areas of work:** website design; menu and service pages; business contact and appointment pathways; agreed website content updates and routine checks.
+- **Case-by-case work:** setup of third-party booking or ordering platforms when the customer's workflow supports them.
 - **Later possibilities:** custom software, deeper integrations, automation, or AI only when discovery shows a real, repeatable problem and the team can support the solution.
 - **Technology principle:** prefer proven, maintainable, platform-neutral tools. Use a custom build only when an observed need cannot be met well with an appropriate existing platform.
 
@@ -52,18 +53,17 @@ Never invent or imply:
 - That an LLC or other legal entity has been formed
 - Proven market demand, product-market fit, guaranteed results, or a final service package
 
-Use **Varahi** as the working brand name in an editable configuration value. Keep an explicit draft-preview indicator and search-engine noindex behavior on. Do not change draft mode to live or remove the noindex rule.
+Use **Varahi** as the selected public brand in an editable configuration value. Do not imply that an LLC has been formed. Keep search-engine noindex behavior on while the site is under review. Do not change draft mode to live or remove the noindex rule.
 
 Use editable placeholders for unconfirmed public information. Known placeholders include:
 
-- Contact email: `hello@example.com`
-- Founder names: not supplied
-- Four founder profiles: one role is known — **Product & Engineering Lead**. Keep the other names and roles editable placeholders.
+- Contact email: `varahi@gmail.com` (confirm it is monitored before launch)
+- Founders: Bhuvaneshwari, Koushik, Lokendra and Pravalika; list each role as **Co-Founder**. Do not invent bios or credentials.
 - Any social links, address, business hours, pricing, legal name, or domain: not supplied
 
 Use Peoria, Illinois as the initial service-area hypothesis only. Describe it as an initial focus area, not proof of local coverage or a registered business address.
 
-For portfolio visuals, create clearly labeled **concepts** for fictional business types. Do not name real local businesses or imply the concepts were commissioned client work. Avoid fabricated metrics.
+For portfolio visuals, create complete, clearly labeled **sample website previews** for the four selected segments. Do not present them as client work, add invented testimonials, or use fabricated metrics.
 
 ## Design direction
 
@@ -83,13 +83,13 @@ Create a high-caliber, contemporary digital studio presentation: clean, confiden
 Build a polished single-page portfolio with clear navigation and these sections:
 
 1. **Hero:** identify Varahi as a local-business web and digital services team; state the customer problem plainly; include “Discuss a project” and “Explore services” actions.
-2. **Who we serve:** explain the initial focus on independent local businesses in and around Peoria, with wording that shows this is a starting focus, not an exclusive confirmed niche.
-3. **Services:** use editable, data-driven service cards. Possible starting categories: business websites, product/service presentation, contact and inquiry paths, booking/ordering platform setup, website care, and practical digital workflow support. Mark the offer as evolving where appropriate.
+2. **Who we serve:** show restaurants, local cafes, small clinics and gaming zones in and around Peoria.
+3. **Services:** use editable, data-driven service cards for website design, menu and service pages, website management, and customer contact pathways. Keep third-party booking and ordering setup case by case.
 4. **Approach:** show the working path from discovery and requirements through platform choice, design/build or setup, workflow testing, owner handoff, and support.
-5. **Concept work:** show up to three polished fictional business concepts. Label every one prominently “Concept” or “Illustrative concept.” Do not use client-result language.
-6. **Team:** four editable founder cards. Use no invented names or bios. Show “Product & Engineering Lead” for the one known role; keep other details visibly pending or hide incomplete profile fields gracefully.
-7. **Contact:** make the next step obvious. Use the configured email address as a `mailto:` action while it remains a placeholder. Do not build a fake contact form that appears to submit but has no working backend.
-8. **Footer:** include navigation, working-name/draft context where appropriate, and accurate contact information only.
+5. **Sample website previews:** show complete mobile website screens for a restaurant, cafe, small clinic and gaming zone. Use readable sample business copy, menus/services, hours and calls to action; do not present samples as client projects or use invented testimonials.
+6. **Team:** show Bhuvaneshwari, Koushik, Lokendra and Pravalika, with each role listed as Co-Founder. Do not invent biographies.
+7. **Contact:** make the next step obvious and use `varahi@gmail.com` as the `mailto:` action. Do not build a fake form that appears to submit without a working backend.
+8. **Footer:** include navigation, draft context, the selected public brand and accurate contact information.
 
 A custom 404 page is appropriate if it fits the implementation.
 
@@ -164,7 +164,7 @@ Add `docs/EDITING_GUIDE.md` explaining, in plain language:
 
 - How to change the brand name, headline, services, process, concept work, founder details, contact email, social links, and service area
 - Which values are placeholders and must be approved
-- How the draft banner and noindex setting work
+- How the noindex setting works
 - How to add or remove a section without scattering content across components
 - How to run and preview the site locally
 

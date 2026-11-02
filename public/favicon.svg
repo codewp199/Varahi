@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Placeholder mark for the working name. Replace once the brand is confirmed. -->
+  <rect width="32" height="32" rx="8" fill="#b23a17"/>
+  <path d="M9 10l7 13 7-13" fill="none" stroke="#f7f3ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

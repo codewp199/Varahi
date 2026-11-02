@@ -1,0 +1,3 @@
+# While the site is in draft, every page also carries <meta name="robots" content="noindex, nofollow">.
+User-agent: *
+Allow: /

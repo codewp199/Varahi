@@ -1,0 +1,29 @@
+---
+import { contactSection, site } from '../config/site';
+
+const { email, emailSubject } = site.contact;
+const mailto = `mailto:${email}?subject=${encodeURIComponent(emailSubject)}`;
+---
+
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow eyebrow-on-dark">Contact</p>
+      <h2 id="contact-title">{contactSection.heading}</h2>
+      <p class="contact-lead">{contactSection.intro}</p>
+      <a class="button button-on-dark" href={mailto}>
+        Email us to discuss a project
+      </a>
+      <p class="contact-address">
+        Or write directly to <a href={mailto}>{email}</a>
+      </p>
+    </div>
+
+    <div class="contact-panel">
+      <h3>{contactSection.helpfulHeading}</h3>
+      <ul>
+        {contactSection.helpful.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

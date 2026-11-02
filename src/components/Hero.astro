@@ -1,0 +1,34 @@
+---
+import { hero, site } from '../config/site';
+import ConceptMockup from './ConceptMockup.astro';
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{hero.eyebrow}</p>
+      <h1 id="hero-title">{hero.headline}</h1>
+      <p class="lead">{hero.lead}</p>
+      <div class="actions">
+        <a class="button" href={hero.primaryCta.href}>{hero.primaryCta.label}</a>
+        <a class="button button-ghost" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
+      </div>
+      <p class="hero-meta">
+        <span class="dot" aria-hidden="true"></span>
+        Initial focus area: {site.serviceArea}
+      </p>
+    </div>
+
+    <figure class="hero-visual">
+      <ConceptMockup
+        layout="restaurant"
+        image="images/restaurant.webp"
+        description="Desktop website preview for a restaurant, showing dining photography, menu navigation, featured dishes and an online ordering action."
+      />
+      <figcaption>
+        <span class="badge">Restaurant website preview</span>
+        Example menu, hours and ordering path.
+      </figcaption>
+    </figure>
+  </div>
+</section>

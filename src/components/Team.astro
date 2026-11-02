@@ -1,0 +1,49 @@
+---
+import { founders, teamIntro } from '../config/site';
+
+const initialsOf = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join('');
+---
+
+<section id="team" class="section" aria-labelledby="team-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="eyebrow">Team</p>
+      <h2 id="team-title">{teamIntro.heading}</h2>
+      <p class="section-intro">{teamIntro.intro}</p>
+    </header>
+
+    <ul class="team-grid" role="list">
+      {
+        founders.map((founder, index) => {
+          const hasName = founder.name.trim() !== '';
+          const hasRole = founder.role.trim() !== '';
+          return (
+            <li class="card team-card">
+              <span class={`avatar${hasName ? '' : ' avatar-pending'}`} aria-hidden="true">
+                {hasName ? initialsOf(founder.name) : String(index + 1)}
+              </span>
+              <h3 class={hasName ? '' : 'pending'}>
+                {hasName ? founder.name : `Founder ${index + 1} — name pending`}
+              </h3>
+              <p class={`team-role${hasRole ? '' : ' pending'}`}>
+                {hasRole ? founder.role : 'Role to be confirmed'}
+              </p>
+              {founder.bio.trim() !== '' && <p class="team-bio">{founder.bio}</p>}
+              {founder.link.trim() !== '' && (
+                <a class="team-link" href={founder.link} rel="noopener">
+                  Profile{hasName ? ` of ${founder.name}` : ''}
+                </a>
+              )}
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+import { services, servicesIntro, serviceStatusLabels } from '../config/site';
+---
+
+<section id="services" class="section section-tint" aria-labelledby="services-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="eyebrow">Services</p>
+      <h2 id="services-title">{servicesIntro.heading}</h2>
+      <p class="section-intro">{servicesIntro.intro}</p>
+      <ul class="legend" aria-label="Service labels">
+        <li><span class="status status-core">{serviceStatusLabels.core}</span> part of our likely first offer</li>
+        <li><span class="status status-case-by-case">{serviceStatusLabels['case-by-case']}</span> only when it fits your workflow</li>
+      </ul>
+    </header>
+
+    <ul class="card-grid" role="list">
+      {
+        services.map((service, index) => (
+          <li class="card service-card">
+            <div class="card-top">
+              <span class="card-index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span class={`status status-${service.status}`}>{serviceStatusLabels[service.status]}</span>
+            </div>
+            <h3>{service.title}</h3>
+            <p>{service.summary}</p>
+            <ul class="tag-list" aria-label={`${service.title}: typical elements`}>
+              {service.includes.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
