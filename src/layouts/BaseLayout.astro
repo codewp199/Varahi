@@ -35,7 +35,7 @@ const robots = noindex || site.draft ? 'noindex, nofollow' : 'index, follow';
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <link rel="icon" href={`${base}favicon.ico`} sizes="32x32" />
     <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
-    <meta name="theme-color" content="#f7f3ec" />
+    <meta name="theme-color" content="#f5f7fb" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
@@ -54,13 +54,6 @@ const robots = noindex || site.draft ? 'noindex, nofollow' : 'index, follow';
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-    {
-      site.draft && (
-        <aside class="draft-banner" aria-label="Draft notice">
-          <strong>Draft preview.</strong> Varahi’s website and service details are being reviewed before public launch.
-        </aside>
-      )
-    }
     <slot />
   </body>
 </html>

@@ -3,91 +3,119 @@ import type { ConceptLayout } from '../config/site';
 
 interface Props {
   layout: ConceptLayout;
-  /** Text alternative for the sample website preview. */
+  image: string;
   description: string;
 }
 
-const { layout, description } = Astro.props;
-const preview = ({
+const { layout, image, description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const preview = {
   restaurant: {
-    brand: 'Neighborhood restaurant',
-    kicker: 'Neighborhood kitchen',
-    headline: 'Dinner, done well.',
-    lead: 'Seasonal plates. A table close to home.',
-    action: 'Order online',
-    section: 'Tonight’s favorites',
-    items: [
-      ['Roasted tomato soup', '$8'],
-      ['Herb chicken plate', '$18'],
-      ['Mushroom rigatoni', '$16'],
+    brand: 'Juniper Table',
+    nav: ['Menu', 'Our story', 'Visit'],
+    navAction: 'Order online',
+    eyebrow: 'NEIGHBORHOOD RESTAURANT',
+    headline: 'A good table is always in season.',
+    lead: 'Thoughtful plates, made for lingering.',
+    action: 'Explore the menu',
+    detailTitle: 'A few favorites',
+    details: [
+      ['Brown butter ravioli', '$19'],
+      ['Wood-fired vegetables', '$14'],
+      ['Sunday supper', 'View menu'],
     ],
-    note: 'Open today · 4–10 pm',
+    footnote: 'Dinner · Tue–Sun · 4–10 pm',
   },
   cafe: {
-    brand: 'Local cafe',
-    kicker: 'Coffee · bakery · good mornings',
-    headline: 'Your daily cup, nearby.',
-    lead: 'Thoughtful coffee and something warm from the oven.',
-    action: 'See the menu',
-    section: 'Cafe favorites',
-    items: [
+    brand: 'Daybreak Coffee',
+    nav: ['Coffee', 'Bakery', 'Find us'],
+    navAction: 'Order ahead',
+    eyebrow: 'COFFEE · BAKERY · BRUNCH',
+    headline: 'Make room for a slower morning.',
+    lead: 'A neighborhood stop for your everyday ritual.',
+    action: 'See today’s menu',
+    detailTitle: 'From the counter',
+    details: [
       ['Honey oat latte', '$5.50'],
-      ['Butter croissant', '$4'],
-      ['Berry breakfast bowl', '$9'],
+      ['Almond croissant', '$4'],
+      ['Weekend brunch', 'See menu'],
     ],
-    note: 'Open today · 7 am–4 pm',
+    footnote: 'Open daily · 7 am–4 pm',
   },
   clinic: {
-    brand: 'Family clinic',
-    kicker: 'Care for every stage of life',
-    headline: 'Feel heard. Feel cared for.',
-    lead: 'Friendly primary care for individuals and families.',
+    brand: 'Community Family Care',
+    nav: ['Care services', 'Our team', 'Contact'],
+    navAction: 'Request a visit',
+    eyebrow: 'PRIMARY CARE · FAMILY MEDICINE',
+    headline: 'Care that starts with listening.',
+    lead: 'Clear information for every step of your visit.',
     action: 'Request an appointment',
-    section: 'How we can help',
-    items: [
-      ['Family medicine', 'Learn more'],
-      ['Preventive visits', 'Learn more'],
-      ['Same-week requests', 'Contact us'],
+    detailTitle: 'How we can help',
+    details: [
+      ['Family medicine', 'Explore'],
+      ['Preventive care', 'Explore'],
+      ['Office hours', 'Mon–Fri · 8–5'],
     ],
-    note: 'Mon–Fri · 8 am–5 pm',
+    footnote: 'Location, phone and visit information',
   },
   gaming: {
-    brand: 'Gaming lounge',
-    kicker: 'Play together · stay awhile',
+    brand: 'Checkpoint Gaming',
+    nav: ['Play', 'Events', 'Pricing'],
+    navAction: 'Book a station',
+    eyebrow: 'PC · CONSOLE · COMMUNITY',
     headline: 'Your next match starts here.',
-    lead: 'PC, console and tabletop sessions for every crew.',
-    action: 'Reserve a station',
-    section: 'Coming up this week',
-    items: [
-      ['Open play · PC', 'Today'],
+    lead: 'Bring your crew. We’ll bring the arena.',
+    action: 'See this week’s events',
+    detailTitle: 'On the schedule',
+    details: [
+      ['Open play · PC', 'Today · 6 pm'],
       ['Fighting game night', 'Thu · 7 pm'],
       ['Weekend team bracket', 'Sat · 2 pm'],
     ],
-    note: 'Open today · noon–midnight',
+    footnote: 'Walk-ins welcome · Reserve online',
   },
-} as const)[layout];
+}[layout];
 ---
 
-<div class={`phone phone-${layout}`} role="img" aria-label={description}>
-  <div class="phone-screen" aria-hidden="true">
-    <div class="preview-top">
-      <strong class="preview-brand">{preview.brand}</strong>
-      <span class="preview-menu" aria-hidden="true"><i></i><i></i></span>
-    </div>
-    <div class="preview-hero">
-      <span class="preview-kicker">{preview.kicker}</span>
-      <h3>{preview.headline}</h3>
-      <p>{preview.lead}</p>
-      <span class="preview-cta">{preview.action}</span>
-    </div>
-    <div class="preview-content">
-      <h4>{preview.section}</h4>
-      <ul class="preview-items">
-        {preview.items.map(([name, detail]) => (
-          <li><span>{name}</span><strong>{detail}</strong></li>
+<div class={`site-preview site-preview-${layout}`} role="img" aria-label={description}>
+  <div class="browser-bar" aria-hidden="true">
+    <span class="browser-controls"><i></i><i></i><i></i></span>
+    <span class="browser-address">preview.varahi.site/{layout}</span>
+    <span class="preview-mark">SAMPLE</span>
+  </div>
+
+  <div class="preview-page" aria-hidden="true">
+    <header class="preview-nav">
+      <span class="preview-brand"><i class="preview-brand-mark"></i>{preview.brand}</span>
+      <nav>{preview.nav.map((item) => <span>{item}</span>)}</nav>
+      <span class="preview-nav-action">{preview.navAction}</span>
+    </header>
+
+    <section class="preview-hero">
+      <img class="preview-photo" src={`${base}${image}`} alt="" loading="lazy" decoding="async" />
+      <div class="preview-hero-copy">
+        <span class="preview-eyebrow">{preview.eyebrow}</span>
+        <h3>{preview.headline}</h3>
+        <p>{preview.lead}</p>
+        <span class="preview-action">{preview.action}<b aria-hidden="true">↗</b></span>
+      </div>
+      {layout === 'restaurant' && <span class="preview-photo-note">A SEASONAL MENU, MADE DAILY</span>}
+      {layout === 'cafe' && <span class="preview-photo-note">GOOD MORNINGS START HERE</span>}
+      {layout === 'clinic' && <span class="preview-photo-note">CARE THAT FEELS PERSONAL</span>}
+      {layout === 'gaming' && <span class="preview-photo-note">PLAY · COMPETE · CONNECT</span>}
+    </section>
+
+    <section class="preview-details">
+      <div class="preview-details-heading">
+        <strong>{preview.detailTitle}</strong>
+        {layout === 'clinic' ? <span>View all services&nbsp; ↗</span> : <span>Explore&nbsp; ↗</span>}
+      </div>
+      <ul>
+        {preview.details.map(([label, value]) => (
+          <li><span>{label}</span><b>{value}</b></li>
         ))}
       </ul>
-      <p class="preview-hours"><span class="preview-dot"></span>{preview.note}</p>
-    </div>
+      <p class="preview-footnote"><i></i>{preview.footnote}</p>
+    </section>
   </div>
 </div>

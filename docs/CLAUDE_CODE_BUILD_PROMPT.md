@@ -53,7 +53,7 @@ Never invent or imply:
 - That an LLC or other legal entity has been formed
 - Proven market demand, product-market fit, guaranteed results, or a final service package
 
-Use **Varahi** as the selected public brand in an editable configuration value. Do not imply that an LLC has been formed. Keep an explicit draft-preview indicator and search-engine noindex behavior on. Do not change draft mode to live or remove the noindex rule.
+Use **Varahi** as the selected public brand in an editable configuration value. Do not imply that an LLC has been formed. Keep search-engine noindex behavior on while the site is under review. Do not change draft mode to live or remove the noindex rule.
 
 Use editable placeholders for unconfirmed public information. Known placeholders include:
 
@@ -164,7 +164,7 @@ Add `docs/EDITING_GUIDE.md` explaining, in plain language:
 
 - How to change the brand name, headline, services, process, concept work, founder details, contact email, social links, and service area
 - Which values are placeholders and must be approved
-- How the draft banner and noindex setting work
+- How the noindex setting works
 - How to add or remove a section without scattering content across components
 - How to run and preview the site locally
 

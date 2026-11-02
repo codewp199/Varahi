@@ -51,6 +51,7 @@ export interface Concept {
   summary: string;
   explores: string[];
   layout: ConceptLayout;
+  image: string;
   /** Text alternative for the drawn mockup. */
   imageDescription: string;
 }
@@ -76,8 +77,8 @@ export interface SocialLink {
 export const site = {
   /**
    * DRAFT CONTROL — keep true until the founders approve launch.
-   * true  → visible "Draft preview" banner + <meta name="robots" content="noindex, nofollow">
-   * false → banner removed and search engines allowed to index (founder approval required)
+   * true  → <meta name="robots" content="noindex, nofollow">
+   * false → search engines may index the site (founder approval required)
    */
   draft: true,
 
@@ -87,7 +88,7 @@ export const site = {
   /** Used in the browser tab, search results and social previews. */
   title: 'Varahi — Website design and management for local businesses',
   description:
-    'Varahi is a four-founder team in the Peoria, Illinois area designing and managing clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones. Draft preview.',
+    'Varahi designs and manages clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones in the Peoria, Illinois area.',
 
   /** Initial service-area hypothesis — not a registered address. */
   serviceArea: 'Peoria, Illinois',
@@ -260,51 +261,55 @@ export const principles = [
 /* ---------- Sample website previews --------------------------------------- */
 
 export const conceptsIntro = {
-  heading: 'Website previews for four local business segments.',
+  heading: 'Four businesses. Four different digital experiences.',
   intro:
-    'Explore sample website layouts for the four business segments Varahi serves. Each preview shows how a business can make its most useful information easy to find on a phone.',
+    'A restaurant needs a menu and ordering path. A clinic needs clarity and reassurance. A cafe sells a daily ritual; a gaming lounge sells an experience. We design around those differences.',
 };
 
 export const concepts: Concept[] = [
   {
     label: 'Website preview',
-    businessType: 'Restaurant website',
+    businessType: 'Restaurant',
     summary:
-      'A useful first screen for a neighborhood restaurant, with a short menu, opening hours and direct routes to dine-in or online ordering.',
+      'A menu-led site that puts signature dishes, dinner hours and the order path up front.',
     explores: ['Menu highlights', 'Hours & directions', 'Ordering link'],
     layout: 'restaurant',
+    image: 'images/restaurant.webp',
     imageDescription:
-      'Sample restaurant website shown on a phone, with a dinner headline, menu items and prices, hours, and an order online button.',
+      'Restaurant website preview with an atmospheric dining photo, menu navigation, highlighted dishes and an order online action.',
   },
   {
     label: 'Website preview',
-    businessType: 'Local cafe website',
+    businessType: 'Local cafe',
     summary:
-      'A welcoming cafe page that features signature drinks, a few food favorites, daily hours and the cafe’s location.',
+      'An editorial cafe homepage built around coffee, fresh pastries and the visit details regulars look for.',
     explores: ['Coffee & food menu', 'Today’s hours', 'Visit details'],
     layout: 'cafe',
+    image: 'images/cafe.webp',
     imageDescription:
-      'Sample cafe website shown on a phone, with the cafe name, featured latte and pastry, drink list with prices, today’s hours and directions.',
+      'Cafe website preview with a latte and pastry photo, a warm editorial layout, menu categories and opening hours.',
   },
   {
     label: 'Website preview',
-    businessType: 'Small clinic website',
+    businessType: 'Small clinic',
     summary:
-      'A calm, readable clinic page with an overview of services, office hours and a clear appointment request path.',
+      'A calm, accessible patient-information site with clear services, clinic hours, location and appointment requests.',
     explores: ['Services & office hours', 'Appointment request', 'Location & contact'],
     layout: 'clinic',
+    image: 'images/clinic.webp',
     imageDescription:
-      'Sample clinic website shown on a phone, with service descriptions, office hours, location details and a request an appointment button.',
+      'Clinic website preview with a bright reception photo, care-service links, office details and an appointment request action.',
   },
   {
     label: 'Website preview',
-    businessType: 'Gaming zone website',
+    businessType: 'Gaming lounge',
     summary:
-      'A high-energy venue page that puts games, events, session details and booking information together.',
+      'An event-driven venue site with gaming stations, weekly tournaments and an easy way to reserve a session.',
     explores: ['Games & events', 'Session information', 'Reserve a station'],
     layout: 'gaming',
+    image: 'images/gaming.webp',
     imageDescription:
-      'Sample gaming zone website shown on a phone, with gaming venue details, weekly events, session information and a reserve a station button.',
+      'Gaming lounge website preview with a neon venue photo, tournament schedule, gaming station details and a reservation action.',
   },
 ];
 

@@ -12,7 +12,7 @@ This repository holds the **draft portfolio website** for Varahi and the founder
 - **Initial audience and offer are set:** restaurants, local cafes, small clinics and gaming zones; website design, menus and service pages, website management, and customer contact paths.
 - **No clients, testimonials, integrations or business results are claimed.** The portfolio contains sample website previews, not client case studies.
 - The configured contact address is `varahi@gmail.com`; confirm it is monitored before launch.
-- **The site stays in draft mode.** It shows a "Draft preview" banner and a `noindex, nofollow` tag until the founders approve changing `draft` in `src/config/site.ts`.
+- **Search indexing stays disabled** through the `noindex, nofollow` tag until the founders approve changing `draft` in `src/config/site.ts`.
 
 ## Positioning and customer hypothesis
 
@@ -47,7 +47,7 @@ This repository holds the **draft portfolio website** for Varahi and the founder
 ├── src/
 │   ├── config/site.ts             # ← ALL public copy and settings live here
 │   ├── components/                # One component per section (reads from site.ts)
-│   ├── layouts/BaseLayout.astro   # <head>, metadata, skip link, draft banner, noindex
+│   ├── layouts/BaseLayout.astro   # <head>, metadata, skip link and noindex
 │   ├── pages/index.astro          # Home page: the order of sections
 │   ├── pages/404.astro            # Custom not-found page
 │   └── styles/global.css          # Design tokens and all styles
@@ -109,8 +109,8 @@ If a custom domain is adopted later, build with `SITE_URL=https://your-domain BA
 
 | Value | Effect |
 | --- | --- |
-| `true` (current) | Yellow "Draft preview" banner and `<meta name="robots" content="noindex, nofollow">` on every page |
-| `false` | Banner removed and indexing allowed. **Requires approval from all four founders.** |
+| `true` (current) | `<meta name="robots" content="noindex, nofollow">` on every page |
+| `false` | Search indexing allowed. **Requires approval from all four founders.** |
 
 The 404 page is always `noindex`.
 

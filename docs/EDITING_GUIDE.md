@@ -87,7 +87,7 @@ Each preview has a `layout` (`'restaurant'`, `'cafe'`, `'clinic'` or `'gaming'`)
 | Favicon and social image | Placeholder "V" mark | Design & Content lane |
 | Business address, hours, pricing, legal name | Not shown, so don't add them | All founders |
 
-## Draft banner and noindex
+## Search indexing and noindex
 
 At the top of `site.ts`:
 
@@ -95,10 +95,7 @@ At the top of `site.ts`:
 draft: true,
 ```
 
-While `true`, the site:
-
-- shows a yellow **"Draft preview"** banner at the top of every page, and
-- tells search engines not to index it (`<meta name="robots" content="noindex, nofollow">`).
+While `true`, the site tells search engines not to index it (`<meta name="robots" content="noindex, nofollow">`).
 
 Set it to `false` **only** after all four founders approve launch. This is recorded in the [decision log](DECISION_LOG.md). The 404 page is never indexed.
 
@@ -115,9 +112,9 @@ To **hide** a section temporarily, remove its line from `index.astro` and its `n
 
 ## Images
 
-The sample website screens are built in Astro and CSS, so there are no image files to manage. If you add photos later:
+Sample website layouts are built in Astro and CSS. Their photos live in `public/images/` as compressed WebP files; the paths are set on each entry in the `concepts` list. To replace a photo:
 
-- put them in `public/images/`,
-- reference them with the base path (ask the Product & Engineering lead, or follow the existing `BASE_URL` pattern in the components),
-- write meaningful alt text, and
-- only use photos you own or have permission to use. Don't hot-link from other sites.
+- add the optimized WebP image to `public/images/`,
+- update the matching `image` value in `src/config/site.ts`,
+- update `imageDescription` so screen-reader users get an accurate description, and
+- use images Varahi owns or has permission to use. Don't hot-link from other sites.

@@ -6,7 +6,7 @@ import ConceptMockup from './ConceptMockup.astro';
 <section id="concepts" class="section section-tint" aria-labelledby="concepts-title">
   <div class="container">
     <header class="section-header">
-      <p class="eyebrow">Sample work</p>
+      <p class="eyebrow">Selected website directions</p>
       <h2 id="concepts-title">{conceptsIntro.heading}</h2>
       <p class="section-intro">{conceptsIntro.intro}</p>
     </header>
@@ -16,7 +16,11 @@ import ConceptMockup from './ConceptMockup.astro';
         concepts.map((concept) => (
           <li class="concept">
             <div class={`concept-stage stage-${concept.layout}`}>
-              <ConceptMockup layout={concept.layout} description={concept.imageDescription} />
+              <ConceptMockup
+                layout={concept.layout}
+                image={concept.image}
+                description={concept.imageDescription}
+              />
             </div>
             <div class="concept-body">
               <p class="badge">{concept.label}</p>
