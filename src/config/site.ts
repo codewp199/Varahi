@@ -113,7 +113,7 @@ export const navigation: NavItem[] = [
 
 export const hero = {
   eyebrow: 'Website design & management for local businesses',
-  headline: 'A clear online presence that fits how your business already works.',
+  headline: 'Websites that make the next step obvious.',
   lead:
     'Varahi designs and manages clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones — making menus, services, hours, location and the next step easy for customers to find.',
   primaryCta: { label: 'Discuss a project', href: '#contact' },
