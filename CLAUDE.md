@@ -13,7 +13,7 @@ Durable rules for anyone, human or AI, changing this repository.
 
 Never add or imply:
 
-- Clients, client logos, testimonials, quotes, case studies or launch history
+- Clients, client logos, testimonials, quotes, case studies or launch history unless accurate, approved and supported by real customer permission
 - Revenue, traffic, conversion, time-saved, performance or other outcome claims
 - Founder names, bios, credentials, experience or roles that founders haven't supplied
 - Live integrations, inventory sync, payments or booking connections
@@ -22,9 +22,9 @@ Never add or imply:
 
 Also:
 
-- "Varahi" is a **working name**. Keep `nameStatus` visible while it is unconfirmed.
+- "Varahi" is the selected public brand; do not claim that a legal entity has been formed.
 - Peoria, Illinois is an **initial focus area**, not a registered address or proven coverage.
-- Portfolio items are **illustrative concepts** for fictional businesses. Keep the label. Never name a real business.
+- Portfolio items are **sample website previews**. Do not imply they are client work or name a real business as a client.
 - Anything not built and tested is labeled **not connected**.
 - **Do not change `site.draft` or remove noindex** without explicit approval from all four founders.
 

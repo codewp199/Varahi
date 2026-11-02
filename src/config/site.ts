@@ -42,11 +42,11 @@ export interface ApproachStep {
   detail: string;
 }
 
-export type ConceptLayout = 'retail' | 'grocery' | 'appointments';
+export type ConceptLayout = 'restaurant' | 'cafe' | 'clinic' | 'gaming';
 
 export interface Concept {
-  /** Shown as a prominent badge. Keep "Illustrative concept" or "Concept". */
-  label: 'Illustrative concept' | 'Concept';
+  /** A sample design label that makes clear this is a website preview. */
+  label: 'Website preview';
   businessType: string;
   summary: string;
   explores: string[];
@@ -81,22 +81,19 @@ export const site = {
    */
   draft: true,
 
-  /** Working brand name. Not yet confirmed as the public or legal name. */
+  /** Public brand name selected by the founders. This does not imply a registered legal entity. */
   name: 'Varahi',
-  /** Shown in the draft banner and footer while the name is unconfirmed. */
-  nameStatus: 'working name',
 
   /** Used in the browser tab, search results and social previews. */
-  title: 'Varahi — Websites and digital setup for independent local businesses',
+  title: 'Varahi — Website design and management for local businesses',
   description:
-    'Varahi (working name) is a four-founder team in the Peoria, Illinois area helping independent local businesses with clear, mobile-friendly websites and practical digital setup. Draft preview.',
+    'Varahi is a four-founder team in the Peoria, Illinois area designing and managing clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones. Draft preview.',
 
   /** Initial service-area hypothesis — not a registered address. */
   serviceArea: 'Peoria, Illinois',
 
   contact: {
-    /** PLACEHOLDER — replace with an approved, monitored inbox. */
-    email: 'hello@example.com',
+    email: 'varahi@gmail.com',
     emailSubject: 'Project conversation',
   },
 
@@ -108,7 +105,7 @@ export const navigation: NavItem[] = [
   { label: 'Who we serve', href: '#who-we-serve' },
   { label: 'Services', href: '#services' },
   { label: 'Approach', href: '#approach' },
-  { label: 'Concepts', href: '#concepts' },
+  { label: 'Examples', href: '#concepts' },
   { label: 'Team', href: '#team' },
 ];
 
@@ -118,7 +115,7 @@ export const hero = {
   eyebrow: 'Web & digital services for local businesses',
   headline: 'A clear online presence that fits how your business already works.',
   lead:
-    'Customers often can’t find your hours, menu, products or the easiest way to reach you. Varahi is a small founding team that helps independent businesses fix that — choosing the right tools, setting them up properly, and handing everything over in plain language.',
+    'Varahi designs and manages clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones — making menus, services, hours, location and the next step easy for customers to find.',
   primaryCta: { label: 'Discuss a project', href: '#contact' },
   secondaryCta: { label: 'Explore services', href: '#services' },
 };
@@ -126,25 +123,25 @@ export const hero = {
 /* ---------- Who we serve --------------------------------------------------- */
 
 export const audience = {
-  heading: 'Starting with independent businesses in and around Peoria.',
+  heading: 'Websites for the local businesses people rely on.',
   intro:
-    'Peoria is our initial focus area while we learn what local owners need most. We are talking with several types of business before choosing where to concentrate — so this list is a starting point, not a fixed niche.',
+    'We are starting with restaurants, local cafes, small clinics and gaming zones in and around Peoria. Each segment needs clear, current information and an easy way for customers to take the next step.',
   segments: [
     {
-      title: 'Independent retailers',
-      description: 'Shops that want products, hours and location to be easy to find on a phone.',
-    },
-    {
-      title: 'Grocery & specialty food',
-      description: 'Stores where weekly specials, pickup details and store information change often.',
-    },
-    {
       title: 'Restaurants',
-      description: 'Places where menus, hours and ordering or reservation paths need to be current.',
+      description: 'Menus, hours, location and clear links to ordering or reservations.',
     },
     {
-      title: 'Appointment & inquiry-based services',
-      description: 'Smaller service businesses that run on bookings, quotes or questions from customers.',
+      title: 'Local cafes',
+      description: 'Coffee, food and atmosphere presented with menus, hours and visit details.',
+    },
+    {
+      title: 'Small clinics',
+      description: 'Services, office information, accepted next steps and appointment request paths.',
+    },
+    {
+      title: 'Gaming zones',
+      description: 'Games, events, hours, pricing and booking or inquiry information in one place.',
     },
   ] satisfies Segment[],
   problemsHeading: 'Problems we are investigating',
@@ -166,39 +163,39 @@ export const servicesIntro = {
 
 export const services: Service[] = [
   {
-    title: 'Business websites',
+    title: 'Website design',
     summary:
       'A mobile-friendly site with the essentials: what you offer, where you are, when you’re open and how to get in touch.',
     includes: ['Mobile-first layout', 'Basic search metadata', 'Accessibility checks'],
     status: 'core',
   },
   {
-    title: 'Product & service presentation',
+    title: 'Menus & service pages',
     summary:
       'Menus, product ranges or service lists organized so customers can understand them quickly.',
     includes: ['Content structure', 'Clear page copy', 'Photo guidance'],
     status: 'core',
   },
   {
-    title: 'Contact & inquiry paths',
+    title: 'Website management',
     summary:
-      'Simple, reliable ways for customers to call, find you on a map, or send a question.',
-    includes: ['Click-to-call', 'Map & directions', 'Inquiry options'],
+      'Ongoing content updates and routine checks to keep key pages, links, menus, hours and business details current.',
+    includes: ['Content and menu updates', 'Routine link checks', 'Small agreed improvements'],
     status: 'core',
   },
   {
-    title: 'Booking & ordering platform setup',
+    title: 'Contact & customer pathways',
+    summary:
+      'Clear ways for customers to call, find you, request an appointment or continue to your existing ordering service.',
+    includes: ['Click-to-call and directions', 'Contact and appointment links', 'Ordering links'],
+    status: 'core',
+  },
+  {
+    title: 'Booking & ordering setup',
     summary:
       'Help choosing and configuring an existing booking, ordering or commerce platform when your workflow supports one.',
     includes: ['Platform comparison', 'Configuration', 'Workflow testing'],
     status: 'case-by-case',
-  },
-  {
-    title: 'Website care',
-    summary:
-      'Optional, separately agreed help after launch: content updates, routine checks and small improvements.',
-    includes: ['Content updates', 'Link & form checks', 'Small fixes'],
-    status: 'core',
   },
   {
     title: 'Practical digital workflow support',
@@ -260,44 +257,54 @@ export const principles = [
   'Clear scope, exclusions and handoff',
 ];
 
-/* ---------- Concept work --------------------------------------------------- */
+/* ---------- Sample website previews --------------------------------------- */
 
 export const conceptsIntro = {
-  heading: 'Illustrative concepts',
+  heading: 'Website previews for four local business segments.',
   intro:
-    'These are original design explorations for fictional businesses, made to show how we think about structure and priorities. They are not client projects and no real business is depicted.',
+    'Explore sample website layouts for the four business segments Varahi serves. Each preview shows how a business can make its most useful information easy to find on a phone.',
 };
 
 export const concepts: Concept[] = [
   {
-    label: 'Illustrative concept',
-    businessType: 'Independent retailer',
+    label: 'Website preview',
+    businessType: 'Restaurant website',
     summary:
-      'A mobile-first storefront page that puts featured products, opening hours and directions within a thumb’s reach.',
-    explores: ['Featured products', 'Hours & directions', 'Call the shop'],
-    layout: 'retail',
+      'A useful first screen for a neighborhood restaurant, with a short menu, opening hours and direct routes to dine-in or online ordering.',
+    explores: ['Menu highlights', 'Hours & directions', 'Ordering link'],
+    layout: 'restaurant',
     imageDescription:
-      'Drawn phone mockup of a fictional shop homepage with a featured product banner, a product grid and an hours panel.',
+      'Sample restaurant website shown on a phone, with a dinner headline, menu items and prices, hours, and an order online button.',
   },
   {
-    label: 'Illustrative concept',
-    businessType: 'Specialty food store',
+    label: 'Website preview',
+    businessType: 'Local cafe website',
     summary:
-      'A weekly-specials layout that is easy for staff to update, with clear pickup information for customers.',
-    explores: ['Weekly specials', 'Pickup details', 'Owner-editable content'],
-    layout: 'grocery',
+      'A welcoming cafe page that features signature drinks, a few food favorites, daily hours and the cafe’s location.',
+    explores: ['Coffee & food menu', 'Today’s hours', 'Visit details'],
+    layout: 'cafe',
     imageDescription:
-      'Drawn phone mockup of a fictional food store page with a specials list, price tags and a pickup information card.',
+      'Sample cafe website shown on a phone, with the cafe name, featured latte and pastry, drink list with prices, today’s hours and directions.',
   },
   {
-    label: 'Illustrative concept',
-    businessType: 'Appointment-based service',
+    label: 'Website preview',
+    businessType: 'Small clinic website',
     summary:
-      'A calm services page with plain-language descriptions and a single path to request or book a time.',
-    explores: ['Service descriptions', 'Booking path (not connected)', 'FAQs'],
-    layout: 'appointments',
+      'A calm, readable clinic page with an overview of services, office hours and a clear appointment request path.',
+    explores: ['Services & office hours', 'Appointment request', 'Location & contact'],
+    layout: 'clinic',
     imageDescription:
-      'Drawn phone mockup of a fictional service business page with a services list and a booking button placeholder.',
+      'Sample clinic website shown on a phone, with service descriptions, office hours, location details and a request an appointment button.',
+  },
+  {
+    label: 'Website preview',
+    businessType: 'Gaming zone website',
+    summary:
+      'A high-energy venue page that puts games, events, session details and booking information together.',
+    explores: ['Games & events', 'Session information', 'Reserve a station'],
+    layout: 'gaming',
+    imageDescription:
+      'Sample gaming zone website shown on a phone, with gaming venue details, weekly events, session information and a reserve a station button.',
   },
 ];
 
@@ -306,18 +313,17 @@ export const concepts: Concept[] = [
 export const teamIntro = {
   heading: 'Four founders, working with you directly.',
   intro:
-    'Varahi is run by four co-founders who each lead an area of the work. Full profiles will be added once each founder has approved their details.',
+    'Four co-founders are building Varahi together. Individual areas of ownership will develop as the team delivers its first projects.',
 };
 
 /**
- * Four founder cards. Only one role is confirmed so far.
- * Empty strings are shown as "pending" (name/role) or hidden (bio/link).
+ * Public names and co-founder roles were supplied by the team. Optional bios and profile links can be added after each founder approves them.
  */
 export const founders: Founder[] = [
-  { name: '', role: 'Product & Engineering Lead', bio: '', link: '' },
-  { name: '', role: '', bio: '', link: '' },
-  { name: '', role: '', bio: '', link: '' },
-  { name: '', role: '', bio: '', link: '' },
+  { name: 'Bhuvaneshwari', role: 'Co-Founder', bio: '', link: '' },
+  { name: 'Koushik', role: 'Co-Founder', bio: '', link: '' },
+  { name: 'Lokendra', role: 'Co-Founder', bio: '', link: '' },
+  { name: 'Pravalika', role: 'Co-Founder', bio: '', link: '' },
 ];
 
 /* ---------- Contact -------------------------------------------------------- */

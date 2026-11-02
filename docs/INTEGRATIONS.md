@@ -6,8 +6,8 @@
 
 | Integration | Status |
 | --- | --- |
-| Contact form / form provider | **Not connected.** Contact is a plain `mailto:` link to a placeholder address. |
-| Email provider / inbox | **Not connected.** `hello@example.com` is a placeholder. |
+| Contact form / form provider | **Not connected.** Contact is a plain `mailto:` link to `varahi@gmail.com`. |
+| Email provider / inbox | **Not connected.** The site uses `varahi@gmail.com`; confirm the inbox is monitored before launch. |
 | Analytics or tracking | **Not connected.** No scripts, cookies or trackers. |
 | Booking, ordering, commerce (e.g. Square, Shopify, booking tools) | **Not connected.** Mentioned only as a possible service. |
 | Google Business Profile / maps / reviews | **Not connected.** |

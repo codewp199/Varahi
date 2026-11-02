@@ -1,24 +1,25 @@
 # Varahi
 
-> Working project name for a four-founder, local-business web design and digital services venture.
+> Four-founder website design and management venture serving local businesses.
 
-This repository holds the **draft portfolio website** for Varahi and the founders' planning documents. We are exploring practical website and digital-setup services for independent local businesses. The aim is to help owners present their business clearly online and make it easier for customers to find services, menus, products and ways to get in touch.
+This repository holds the **draft portfolio website** for Varahi and the founders' planning documents. Varahi focuses on website design and management for restaurants, local cafes, small clinics and gaming zones, helping customers find menus, services, hours, location and ways to get in touch.
 
 ## Current status
 
 **Early draft — not approved for public launch.**
 
-- **Varahi is a working name.** The public brand, legal name and entity status need founder confirmation. No LLC or other legal entity is claimed.
-- **Public content needs founder approval.** That covers positioning, service descriptions, contact email, founder profiles and the domain.
-- **No clients, testimonials, integrations or business results are claimed.** Portfolio pieces are labeled illustrative concepts for fictional businesses.
+- **Varahi is the selected public brand.** This does not claim that an LLC or other legal entity has been formed.
+- **Initial audience and offer are set:** restaurants, local cafes, small clinics and gaming zones; website design, menus and service pages, website management, and customer contact paths.
+- **No clients, testimonials, integrations or business results are claimed.** The portfolio contains sample website previews, not client case studies.
+- The configured contact address is `varahi@gmail.com`; confirm it is monitored before launch.
 - **The site stays in draft mode.** It shows a "Draft preview" banner and a `noindex, nofollow` tag until the founders approve changing `draft` in `src/config/site.ts`.
 
 ## Positioning and customer hypothesis
 
-- **What we do:** service-led B2B help for independent local businesses. That means mobile-friendly websites, clear product or service presentation, contact and inquiry paths, setup of suitable booking or ordering platforms when the workflow supports it, and practical support.
-- **How we differ:** we do more than hand over a website. We help a business understand its needs, choose a maintainable platform, set up and test the workflow, hand it over clearly, and support it.
+- **What we do:** website design and ongoing management for restaurants, local cafes, small clinics and gaming zones. Typical pages cover menus, services, hours, location and contact or appointment paths.
+- **How we work:** agree on the scope, build for mobile, test the customer path, and hand the site and accounts over clearly. Booking and ordering platform setup is scoped after discovery.
 - **Initial geography:** the Peoria, Illinois area, as a starting hypothesis to validate.
-- **Segments to investigate:** independent retailers, grocery and specialty food stores, restaurants, and one lower-complexity appointment or inquiry-based service segment. These are being investigated, not confirmed targets. The [product brief](docs/PRODUCT_BRIEF.md) also lists home services.
+- **Initial segments:** restaurants, local cafes, small clinics and gaming zones. The team still needs to learn which segment has the strongest demand and delivery fit.
 - **Not a SaaS or AI product company.** Custom software, automation or AI come later, and only where discovery shows a real, repeatable need.
 
 ## Stack
@@ -135,12 +136,12 @@ The 404 page is always `noindex`.
 
 ## Next steps
 
-1. Confirm the working name and public-facing positioning.
-2. Agree on the initial target customer and service scope.
-3. Add founder profiles and approved contact details.
-4. Review the portfolio draft (pull request `feat/varahi-portfolio`).
+1. Review the sample website previews and confirm they match the intended offer.
+2. Interview local owners across the four segments; compare urgency, ability to pay and founder access.
+3. Define one fixed-scope website design and management package with delivery time, exclusions, pricing and support terms.
+4. Confirm `varahi@gmail.com` is monitored; add founder bios only when each person approves their own wording.
 5. Complete real-device, screen-reader and accessibility checks before launch.
 
 ---
 
-This README describes a work in progress. It is not a claim that an LLC has been formed. The venture name, public content and entity status all require founder confirmation.
+This README describes a work in progress. It is not a claim that an LLC has been formed.

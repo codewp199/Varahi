@@ -32,7 +32,7 @@ All of these are in `src/config/site.ts`.
 
 | To change… | Edit… |
 | --- | --- |
-| Brand name | `site.name` (and `site.nameStatus` — remove the "working name" wording only once confirmed) |
+| Public brand name | `site.name` (currently Varahi) |
 | Browser tab title / search description | `site.title`, `site.description` |
 | Service area | `site.serviceArea` (also mentioned in `audience.heading` / `audience.intro`) |
 | Contact email | `site.contact.email`, and `site.contact.emailSubject` for the pre-filled subject |
@@ -42,7 +42,7 @@ All of these are in `src/config/site.ts`.
 | Services | `servicesIntro` and the `services` list |
 | Service labels ("Core service" / "Scoped after discovery") | `status` on each service; label wording in `serviceStatusLabels` |
 | Process steps | `approachIntro`, `approach`, `principles` |
-| Concept work | `conceptsIntro` and the `concepts` list |
+| Sample website previews | `conceptsIntro` and the `concepts` list |
 | Founder cards | `founders` |
 | Contact section text | `contactSection` |
 | Navigation links | `navigation` |
@@ -65,28 +65,25 @@ To add a service, copy one block including its `{ … },` and edit it. To remove
 ### Founder cards
 
 ```ts
-{ name: '', role: 'Product & Engineering Lead', bio: '', link: '' },
+{ name: 'Bhuvaneshwari', role: 'Co-Founder', bio: '', link: '' },
 ```
 
-- Leave `name` empty to show "Founder 1 — name pending".
-- Leave `role` empty to show "Role to be confirmed".
 - `bio` and `link` are **hidden** when empty, so there are no blank gaps.
 - Only add details each founder has written and approved for public use.
 
-### Concept work
+### Sample website previews
 
-Each concept has a `layout` (`'retail'`, `'grocery'` or `'appointments'`) that chooses the drawn phone illustration, plus an `imageDescription` for screen readers. Keep `label` as `'Illustrative concept'` or `'Concept'`. Never name a real business or describe a concept as client work.
+Each preview has a `layout` (`'restaurant'`, `'cafe'`, `'clinic'` or `'gaming'`) that chooses a complete sample website screen, plus an `imageDescription` for screen readers. Keep the label as `'Website preview'`. Do not present sample content as a client project or use invented testimonials.
 
 ## Placeholders that must be approved before launch
 
 | Value | Current placeholder | Who approves |
 | --- | --- | --- |
-| Brand name | `Varahi` (working name) | All founders, after name, domain and legal checks |
-| Contact email | `hello@example.com` | All founders, and it must be a monitored inbox |
-| Founder names, roles 2–4, bios, links | Empty / pending | Each founder for their own card |
+| Contact email | `varahi@gmail.com` | Confirm the inbox is monitored before launch |
+| Founder bios and profile links | Not supplied | Each founder for their own card |
 | Social links | None | All founders |
 | Domain | Not set (uses `codewp199.github.io/Varahi/`) | All founders |
-| Positioning and service copy | Draft from the product brief | All founders, after discovery |
+| Positioning and service copy | Website design and management for four selected local segments | Review after customer discovery |
 | Favicon and social image | Placeholder "V" mark | Design & Content lane |
 | Business address, hours, pricing, legal name | Not shown, so don't add them | All founders |
 
@@ -118,7 +115,7 @@ To **hide** a section temporarily, remove its line from `index.astro` and its `n
 
 ## Images
 
-The current illustrations are drawn in CSS, so there are no image files to manage. If you add photos later:
+The sample website screens are built in Astro and CSS, so there are no image files to manage. If you add photos later:
 
 - put them in `public/images/`,
 - reference them with the base path (ask the Product & Engineering lead, or follow the existing `BASE_URL` pattern in the components),

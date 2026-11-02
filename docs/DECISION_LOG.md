@@ -19,9 +19,45 @@ Record decisions that affect positioning, scope, pricing, architecture, or commi
 
 ---
 
-## Initial open decisions
+## Decisions recorded — 2 November 2026
 
-### Initial customer segment
+### Public brand
+
+- **Status:** Decided
+- **Decision:** Use Varahi as the public brand name.
+- **Context / problem:** The portfolio and founder materials need one consistent name.
+- **Trade-offs:** A public brand decision does not establish an LLC or confirm name availability for legal use.
+- **Owner and next action:** Founders to complete any required legal, domain and account checks before public launch.
+
+### Initial target segments
+
+- **Status:** Decided as the starting focus; priority segment remains open
+- **Decision:** Focus discovery on restaurants, local cafes, small clinics and gaming zones.
+- **Context / problem:** These businesses need clear online information about menus, services, hours, location and customer next steps.
+- **Evidence:** Founder-selected direction; customer interviews and willingness to pay still need validation.
+- **Owner and next action:** Team to interview owners across the four segments and choose one segment to prioritize.
+
+### Core service direction
+
+- **Status:** Decided as the service direction; package and pricing remain open
+- **Decision:** Lead with website design and management, including menu and service pages, business information, contact paths and agreed ongoing updates.
+- **Trade-offs:** Booking, ordering, payment and other third-party platform setup stays scoped after discovery.
+- **Owner and next action:** Product and engineering lead to propose a fixed-scope package with effort, exclusions, price hypothesis and support terms.
+
+### Founder names and roles
+
+- **Status:** Decided for the draft site
+- **Decision:** List Bhuvaneshwari, Koushik, Lokendra and Pravalika as Co-Founders. Add bios or profile links only when each founder supplies and approves them.
+
+### Contact address
+
+- **Status:** Selected for the draft site
+- **Decision:** Use `varahi@gmail.com` for contact.
+- **Owner and next action:** Confirm it is monitored before public launch.
+
+## Remaining open decisions
+
+### Priority customer segment
 
 - **Status:** Open
 - **Question:** Which local-business segment has the strongest combination of urgent pain, ability to pay, founder access, and delivery fit?
@@ -32,12 +68,6 @@ Record decisions that affect positioning, scope, pricing, architecture, or commi
 - **Status:** Open
 - **Question:** What fixed-scope website offer can the team deliver reliably with available time and skills?
 - **Next action:** Define deliverables, exclusions, timeline, handoff, ongoing support, and a price hypothesis after discovery.
-
-### Company name and public identity
-
-- **Status:** Open
-- **Question:** Is Varahi the final public brand, or only the current repository name?
-- **Next action:** Agree as founders and complete appropriate name, domain, and legal checks before using the name as a confirmed company identity.
 
 ### Repository and website release
 

@@ -3,7 +3,7 @@
 **Status:** Discovery  
 **Venture:** Four-founder, service-led B2B web design and development startup  
 **Initial geography:** Peoria-area independent businesses (hypothesis to validate)  
-**Company name:** Varahi is a working project name; public brand is not yet confirmed.
+**Public brand:** Varahi. This is a brand decision, not confirmation that an LLC or other legal entity has been formed.
 
 ## Objective
 
@@ -11,9 +11,9 @@ Test whether independent local businesses have an urgent, well-defined digital p
 
 ## Customer hypothesis
 
-Potential early customers may include independent retailers, grocery and specialty food stores, restaurants, home services, and other appointment- or inquiry-based businesses.
+Initial target segments are restaurants, local cafes, small clinics and gaming zones in and around Peoria, Illinois.
 
-This is a list of segments to investigate, not a decision that all are target customers. Select an initial segment based on evidence from owner interviews and willingness to pay.
+The four segments are the team's starting focus. Select which segment to prioritize first based on owner interviews, willingness to pay, founder access and delivery fit.
 
 ## Problem hypotheses to validate
 
@@ -27,15 +27,15 @@ Do not assume a business needs an app, AI, online ordering, or a custom integrat
 
 ## Candidate initial offer
 
-A fixed-scope, mobile-friendly business website with:
+A fixed-scope, mobile-friendly website design and management service with:
 
 - Clear home, services/products, about, and contact information
 - Click-to-call, map, and inquiry/contact paths
 - Basic search metadata and accessibility checks
 - Owner handoff and a short training session
-- Optional, separately scoped maintenance
+- Ongoing website management for agreed content updates, routine checks and small improvements
 
-Ordering, payments, booking systems, inventory sync, custom dashboards, and AI features should be treated as optional follow-on work only after feasibility, cost, and customer demand are established.
+Third-party ordering, payments, booking systems, inventory sync, custom dashboards and AI features should be scoped as follow-on work only after feasibility, cost and customer demand are established.
 
 ## Value hypothesis
 
@@ -65,8 +65,8 @@ The first validation milestone is reached when the team can:
 
 ## Open decisions
 
-- Which customer segment should we serve first?
+- Which of the four selected segments should we serve first?
 - What one problem can we solve better and more simply than the customer's current workaround?
 - What is included in the first package, and what is explicitly out of scope?
 - Who owns sales, delivery, design/content, quality, and ongoing support?
-- Which brand name and legal structure will be used publicly?
+- What legal structure, if any, will be formed, and what checks are required before making legal claims?
