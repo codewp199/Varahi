@@ -1,0 +1,34 @@
+---
+import { audience } from '../config/site';
+---
+
+<section id="who-we-serve" class="section" aria-labelledby="who-title">
+  <div class="container">
+    <div class="split">
+      <header class="section-header">
+        <p class="eyebrow">Who we serve</p>
+        <h2 id="who-title">{audience.heading}</h2>
+        <p class="section-intro">{audience.intro}</p>
+      </header>
+
+      <div class="problems">
+        <h3 class="mini-heading">{audience.problemsHeading}</h3>
+        <ul class="check-list">
+          {audience.problems.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+
+    <ul class="segment-grid" role="list" aria-label="Business types we are exploring">
+      {
+        audience.segments.map((segment) => (
+          <li class="segment">
+            <p class="segment-status">Exploring</p>
+            <h3>{segment.title}</h3>
+            <p>{segment.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

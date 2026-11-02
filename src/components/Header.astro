@@ -1,0 +1,82 @@
+---
+import { navigation, site, hero } from '../config/site';
+
+interface Props {
+  /** Prefix for in-page anchors on pages other than the home page. */
+  linkPrefix?: string;
+}
+
+const { linkPrefix = '' } = Astro.props;
+const home = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href={home}>
+      <svg class="wordmark-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="8" fill="currentColor"></rect>
+        <path d="M9 10l7 13 7-13" fill="none" stroke="var(--color-paper)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span>{site.name}</span>
+      <span class="visually-hidden">— home</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-menu-toggle
+    >
+      <span class="menu-icon" aria-hidden="true"></span>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        {
+          navigation.map((item) => (
+            <li>
+              <a href={`${linkPrefix}${item.href}`}>{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="button button-small nav-cta" href={`${linkPrefix}${hero.primaryCta.href}`}>
+        {hero.primaryCta.label}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Progressive enhancement: without JavaScript the navigation is always visible.
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const nav = document.getElementById('site-nav');
+
+  if (toggle && nav) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('is-open', open);
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    nav.addEventListener('click', (event) => {
+      if ((event.target as HTMLElement).closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    window.matchMedia('(min-width: 60rem)').addEventListener('change', (e) => {
+      if (e.matches) setOpen(false);
+    });
+  }
+</script>

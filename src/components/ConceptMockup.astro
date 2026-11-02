@@ -1,0 +1,83 @@
+---
+import type { ConceptLayout } from '../config/site';
+
+interface Props {
+  layout: ConceptLayout;
+  /** Text alternative for the drawing. */
+  description: string;
+}
+
+const { layout, description } = Astro.props;
+---
+
+<!-- Phone mockup drawn with CSS. No photos, logos or real business details. -->
+<div class={`phone phone-${layout}`} role="img" aria-label={description}>
+  <div class="phone-screen" aria-hidden="true">
+    <div class="ph-top">
+      <span class="ph-logo"></span>
+      <span class="ph-menu"></span>
+    </div>
+
+    {
+      layout === 'retail' && (
+        <>
+          <div class="ph-banner">
+            <span class="ph-text ph-text-light w-60" />
+            <span class="ph-text ph-text-light w-40" />
+            <span class="ph-pill" />
+          </div>
+          <div class="ph-grid">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div class="ph-row ph-card">
+            <span class="ph-icon" />
+            <span class="ph-text w-50" />
+            <span class="ph-tag" />
+          </div>
+        </>
+      )
+    }
+
+    {
+      layout === 'grocery' && (
+        <>
+          <div class="ph-heading">
+            <span class="ph-text ph-text-strong w-50" />
+            <span class="ph-tag" />
+          </div>
+          <ul class="ph-list">
+            <li><span class="ph-swatch" /><span class="ph-text w-60" /><span class="ph-price" /></li>
+            <li><span class="ph-swatch" /><span class="ph-text w-50" /><span class="ph-price" /></li>
+            <li><span class="ph-swatch" /><span class="ph-text w-70" /><span class="ph-price" /></li>
+            <li><span class="ph-swatch" /><span class="ph-text w-40" /><span class="ph-price" /></li>
+          </ul>
+          <div class="ph-card ph-card-accent">
+            <span class="ph-text ph-text-light w-40" />
+            <span class="ph-text ph-text-light w-70" />
+          </div>
+        </>
+      )
+    }
+
+    {
+      layout === 'appointments' && (
+        <>
+          <div class="ph-intro">
+            <span class="ph-text ph-text-strong w-70" />
+            <span class="ph-text w-90" />
+            <span class="ph-text w-60" />
+          </div>
+          <ul class="ph-list ph-services">
+            <li><span class="ph-text w-50" /><span class="ph-chev" /></li>
+            <li><span class="ph-text w-60" /><span class="ph-chev" /></li>
+            <li><span class="ph-text w-40" /><span class="ph-chev" /></li>
+          </ul>
+          <span class="ph-button" />
+        </>
+      )
+    }
+  </div>
+</div>
