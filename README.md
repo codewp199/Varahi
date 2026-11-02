@@ -16,7 +16,9 @@ The initial portfolio is planned to introduce:
 - Our delivery approach and contact information
 
 ## Founder workspace
-\n- [Claude Code build prompt](docs/CLAUDE_CODE_BUILD_PROMPT.md) — copyable, repository-specific brief for creating the portfolio website\n
+
+- [Claude Code build prompt](docs/CLAUDE_CODE_BUILD_PROMPT.md) — copyable, repository-specific brief for creating the portfolio website
+
 These working documents help the team validate the business and coordinate execution:
 
 - [Product brief](docs/PRODUCT_BRIEF.md) — customer hypothesis, candidate offer, and validation criteria
