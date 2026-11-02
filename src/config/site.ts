@@ -112,7 +112,7 @@ export const navigation: NavItem[] = [
 /* ---------- Hero ----------------------------------------------------------- */
 
 export const hero = {
-  eyebrow: 'Web & digital services for local businesses',
+  eyebrow: 'Website design & management for local businesses',
   headline: 'A clear online presence that fits how your business already works.',
   lead:
     'Varahi designs and manages clear, mobile-friendly websites for restaurants, local cafes, small clinics and gaming zones — making menus, services, hours, location and the next step easy for customers to find.',

@@ -144,4 +144,4 @@ The 404 page is always `noindex`.
 
 ---
 
-This README describes a work in progress. It is not a claim that an LLC has been formed.
+This README describes a work in progress. Varahi is the selected public brand; this is not a claim that an LLC has been formed.
